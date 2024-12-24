@@ -59,31 +59,31 @@ cout<<endl;
 cout<<"Hello fellow customer welcome to the delicious Filipino Dessert Store "<<endl;
 
 while(userInput!="done"){
-cout<<endl;
-cout<<"How may I help you?"<<endl;   
-cout<<"(Choose options between 'Done, Menu, Order')"<<endl;
-cout<<"(Type done to quit)"<<endl;
-cin>>userInput;
-cout<<endl;
-
-if(userInput=="done" || userInput=="Done"){
-userInput="done";
-}
-
-if(userInput=="menu" || userInput=="Menu"){
-cout<<"Here is the Menu"<<endl;
-studentOrder.Menu();
-}
-
-if(userInput=="order" || userInput=="Order"){
-    while(userOrder!="done"){
-    cout<<"What you would like to order?"<<endl;
-    cout<<"Type 'done' to stop ordering"<<endl;
-    cin>>userOrder;
-    studentOrder.Order(userOrder);
     cout<<endl;
-    }//while loop
-}//if loop
+    cout<<"How may I help you?"<<endl;   
+    cout<<"(Choose options between 'Done, Menu, Order')"<<endl;
+    cout<<"(Type done to quit)"<<endl;
+    cin>>userInput;
+    cout<<endl;
+    
+    if(userInput=="done" || userInput=="Done"){
+    userInput="done";
+    }
+    
+    if(userInput=="menu" || userInput=="Menu"){
+    cout<<"Here is the Menu"<<endl;
+    studentOrder.Menu();
+    }
+    
+    if(userInput=="order" || userInput=="Order"){
+        while(userOrder!="done"){
+        cout<<"What you would like to order?"<<endl;
+        cout<<"Type 'done' to stop ordering"<<endl;
+        cin>>userOrder;
+        studentOrder.Order(userOrder);
+        cout<<endl;
+        }//while loop
+    }//if loop
 }//while loop
 
 cout<<"Your total is $"<< studentOrder.Receipt()<<endl;
